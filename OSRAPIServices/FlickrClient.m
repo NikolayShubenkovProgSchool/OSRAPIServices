@@ -19,10 +19,10 @@
                                                                                @"tags":tag,
                                                                                @"lat":@(55),
                                                                                @"lon":@(37),
-                                                                               @"format":@"json"}
+                                                                               @"format":@"json",
+                                                                               @"nojsoncallback":@"1"}
                                                                        error:nil] mutableCopy];
-    [request setValue:@"application/json"
-   forHTTPHeaderField:@"Accept"];
+
     AFHTTPRequestOperation *tagOperation = [[AFHTTPRequestOperation alloc]initWithRequest:request];
     AFJSONResponseSerializer *serializer = [AFJSONResponseSerializer new];
     serializer.readingOptions = NSJSONReadingAllowFragments;
