@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface ViewController ()
 
@@ -14,14 +15,24 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self showIsCalculatingSomething:YES];
+    [self performSelector:@selector(showIsCalculatingSomething:)
+               withObject:nil
+               afterDelay:1];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)showIsCalculatingSomething:(BOOL)calculating
+{
+    if (calculating){
+        [MBProgressHUD showHUDAddedTo:self.view
+                             animated:YES];
+    }
+    else {
+        [MBProgressHUD hideAllHUDsForView:self.view
+                                 animated:YES];
+    }
 }
-
 @end
