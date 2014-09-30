@@ -10,6 +10,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 
 #import "PSRRSSClient.h"
+#import "FlickrClient.h"
 
 @interface ViewController ()
 
@@ -42,5 +43,14 @@
                
                [self showIsCalculatingSomething:NO];
            }];
+}
+
+- (IBAction)requestPhotos:(id)sender {
+    FlickrClient *client = [FlickrClient new];
+    [client getPhotosWithTag:@"Moscow"
+                  complition:^(id data, BOOL success) {
+                      
+                    
+                  }];
 }
 @end
