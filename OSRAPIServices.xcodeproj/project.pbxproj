@@ -145,6 +145,7 @@ fi
 		<dict>
 			<key>children</key>
 			<array>
+				<string>FEBA254419DB1D43007708C0</string>
 				<string>FE3DCEBC19DB13B200E43AA5</string>
 				<string>FE3DCED619DB13B200E43AA5</string>
 				<string>FE3DCEBB19DB13B200E43AA5</string>
@@ -232,6 +233,7 @@ fi
 			<key>files</key>
 			<array>
 				<string>FE3DCEC619DB13B200E43AA5</string>
+				<string>FEBA254319DB1D2A007708C0</string>
 				<string>FE3DCEC319DB13B200E43AA5</string>
 				<string>FE3DCEC019DB13B200E43AA5</string>
 			</array>
@@ -838,6 +840,8 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -890,6 +894,8 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -947,6 +953,57 @@ fi
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>FEBA254119DB1D2A007708C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>PSRRSSClient.h</string>
+			<key>path</key>
+			<string>OSRAPIServices/PSRRSSClient.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FEBA254219DB1D2A007708C0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>PSRRSSClient.m</string>
+			<key>path</key>
+			<string>OSRAPIServices/PSRRSSClient.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FEBA254319DB1D2A007708C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FEBA254219DB1D2A007708C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FEBA254419DB1D43007708C0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FEBA254119DB1D2A007708C0</string>
+				<string>FEBA254219DB1D2A007708C0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>API</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>

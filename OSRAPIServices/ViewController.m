@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
+#import "PSRRSSClient.h"
+
 @interface ViewController ()
 
 @end
@@ -18,10 +20,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self showIsCalculatingSomething:YES];
-    [self performSelector:@selector(showIsCalculatingSomething:)
-               withObject:nil
-               afterDelay:1];
 }
 
 - (void)showIsCalculatingSomething:(BOOL)calculating
@@ -34,5 +32,15 @@
         [MBProgressHUD hideAllHUDsForView:self.view
                                  animated:YES];
     }
+}
+- (IBAction)requestRSS:(id)sender
+{
+    PSRRSSClient *client = [PSRRSSClient new];
+    [self showIsCalculatingSomething:YES];
+    [client getRSSFromURL:@"http://izvestia.ru/xml/rss/politics.xml"
+           withComplition:^(id data, BOOL success) {
+               
+               [self showIsCalculatingSomething:NO];
+           }];
 }
 @end
