@@ -95,7 +95,7 @@
 - (void)p_configureCell:(PSRPhotoCollectionViewCell *)aCell withPhoto:(PSRFlickrPhoto *)photo
 {
     aCell.title.text = [photo title];
-    [aCell applyImageWithURL:[photo lowQualityURL]];
+    [aCell applyImageWithURL:[photo highQualityURL]];
 }
 
 - (PSRFlickrPhoto *)p_photoForIndexPath:(NSIndexPath *)indexPath
