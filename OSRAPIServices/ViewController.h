@@ -12,6 +12,7 @@
 - (IBAction)requestRSS:(id)sender;
 
 - (IBAction)requestPhotos:(id)sender;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
