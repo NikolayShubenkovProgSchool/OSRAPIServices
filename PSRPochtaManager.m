@@ -159,11 +159,14 @@
     [request setValue:@"Accept"
    forHTTPHeaderField:@"application/json; charset=utf-8"];
     
-    [request setValue:@"User-Agent"
-   forHTTPHeaderField:@"RussianPost/2.1"];
-   
-    [request setValue:@"MobileApiAccessToken"
-   forHTTPHeaderField:@"Yi5GaWMTY8x27uEPte0/l9vfrZw="];
+    [request setValue:@"RussianPost/2.1"
+   forHTTPHeaderField:@"User-Agent"];
+
+    //  как хорошо, когда апи почты говорит в чем проблема
+    //{"code":"1005","desc":"Request is not authorized: Access token was either missing or invalid."}
+
+    [request setValue:@"Yi5GaWMTY8x27uEPte0/l9vfrZw="
+   forHTTPHeaderField:@"MobileApiAccessToken"];
     
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
     
@@ -175,7 +178,7 @@
 - (NSMutableDictionary *)p_defaultParameters
 {
     NSDateFormatter *formatter1 = [NSDateFormatter new];
-    formatter1.dateFormat = @"YYYY-MM-dd";
+    formatter1.dateFormat = @"yyyy-MM-dd";
     NSDateFormatter *formatter2 = [NSDateFormatter new];
     formatter2.dateFormat = @"HH:mm:ss";
     NSString *yearMonthday = [formatter1 stringFromDate:[NSDate date]];
