@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 
+- (void)applyImageWithURL:(NSURL *)url;
+
 @end

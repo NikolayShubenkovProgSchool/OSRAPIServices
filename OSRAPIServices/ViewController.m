@@ -95,9 +95,7 @@
 - (void)p_configureCell:(PSRPhotoCollectionViewCell *)aCell withPhoto:(PSRFlickrPhoto *)photo
 {
     aCell.title.text = [photo title];
-    NSData *imageData = [NSData dataWithContentsOfURL:[photo lowQualityURL]];
-    UIImage *image = [UIImage imageWithData:imageData];
-    aCell.image.image = image;
+    [aCell applyImageWithURL:[photo lowQualityURL]];
 }
 
 - (PSRFlickrPhoto *)p_photoForIndexPath:(NSIndexPath *)indexPath
@@ -108,9 +106,21 @@
 - (void)p_parseFlickrData:(id)data
 {
     NSParameterAssert(data);
-    NSArray *photos = [PSRFlickrPhoto photosWithInfoes:data[@"photos"][@"photo"]];
-    self.photos = photos;
-    [self.collectionView reloadData];
+    //переключимся в фоновый поток
+    // и спрарсим данные
+    dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(backgroundQueue, ^{
+        NSArray *photos = [PSRFlickrPhoto photosWithInfoes:data[@"photos"][@"photo"]];
+        self.photos = photos;
+        
+        dispatch_queue_t mainQueu = dispatch_get_main_queue();
+        dispatch_async(mainQueu, ^{
+            [self.collectionView reloadData];
+        });
+    });
+    //вернемся в основной поток
+    
 }
 
 @end
