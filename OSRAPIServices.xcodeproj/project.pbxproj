@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E10B4DB02EB1674F57884CA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83169A34057C1962DF0F43C /* libPods.a */; };
 		FE2DC40E19DF119100CFC79C /* PSRPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */; };
+		FE2DC41119DF1CF100CFC79C /* PSRPochtaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC41019DF1CF100CFC79C /* PSRPochtaManager.m */; };
+		FE2DC41419DF1EFD00CFC79C /* PSROfficesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC41319DF1EFD00CFC79C /* PSROfficesMapViewController.m */; };
 		FE3DCEC019DB13B200E43AA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3DCEBF19DB13B200E43AA5 /* main.m */; };
 		FE3DCEC319DB13B200E43AA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3DCEC219DB13B200E43AA5 /* AppDelegate.m */; };
 		FE3DCEC619DB13B200E43AA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3DCEC519DB13B200E43AA5 /* ViewController.m */; };
@@ -38,6 +40,10 @@
 		B83169A34057C1962DF0F43C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2DC40C19DF119100CFC79C /* PSRPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		FE2DC40F19DF1CF100CFC79C /* PSRPochtaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPochtaManager.h; sourceTree = "<group>"; };
+		FE2DC41019DF1CF100CFC79C /* PSRPochtaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRPochtaManager.m; sourceTree = "<group>"; };
+		FE2DC41219DF1EFD00CFC79C /* PSROfficesMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROfficesMapViewController.h; sourceTree = "<group>"; };
+		FE2DC41319DF1EFD00CFC79C /* PSROfficesMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSROfficesMapViewController.m; sourceTree = "<group>"; };
 		FE3DCEBA19DB13B200E43AA5 /* OSRAPIServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSRAPIServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3DCEBE19DB13B200E43AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3DCEBF19DB13B200E43AA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 				FE3DCEC419DB13B200E43AA5 /* ViewController.h */,
 				FE3DCEC519DB13B200E43AA5 /* ViewController.m */,
 				FE3DCEC719DB13B200E43AA5 /* Main.storyboard */,
+				FE2DC41219DF1EFD00CFC79C /* PSROfficesMapViewController.h */,
+				FE2DC41319DF1EFD00CFC79C /* PSROfficesMapViewController.m */,
 				FE2DC40C19DF119100CFC79C /* PSRPhotoCollectionViewCell.h */,
 				FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */,
 				FE3DCECA19DB13B200E43AA5 /* Images.xcassets */,
@@ -164,6 +172,8 @@
 		FEBA254419DB1D43007708C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FE2DC40F19DF1CF100CFC79C /* PSRPochtaManager.h */,
+				FE2DC41019DF1CF100CFC79C /* PSRPochtaManager.m */,
 				FEBD90B619DEED58005AB299 /* PSRFlickrPhoto.h */,
 				FEBD90B719DEED58005AB299 /* PSRFlickrPhoto.m */,
 				FEBA254519DB24FD007708C0 /* FlickrClient.h */,
@@ -311,10 +321,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2DC41119DF1CF100CFC79C /* PSRPochtaManager.m in Sources */,
 				FEBD90BB19DEEE37005AB299 /* PSRFlickrSearchOptions.m in Sources */,
 				FEBA254719DB24FD007708C0 /* FlickrClient.m in Sources */,
 				FE3DCEC619DB13B200E43AA5 /* ViewController.m in Sources */,
 				FEBA254319DB1D2A007708C0 /* PSRRSSClient.m in Sources */,
+				FE2DC41419DF1EFD00CFC79C /* PSROfficesMapViewController.m in Sources */,
 				FEBD90B819DEED58005AB299 /* PSRFlickrPhoto.m in Sources */,
 				FE2DC40E19DF119100CFC79C /* PSRPhotoCollectionViewCell.m in Sources */,
 				FE3DCEC319DB13B200E43AA5 /* AppDelegate.m in Sources */,
