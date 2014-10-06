@@ -15,8 +15,8 @@
 #import "PSRPochtaManager.h"
 
 @interface PSROfficesMapViewController () <MKMapViewDelegate>
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
+@property (nonatomic, weak) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) NSArray *offises;
 @end
 
 @implementation PSROfficesMapViewController
@@ -50,8 +50,25 @@
 
 - (void)p_parseOffices:(NSArray *)offices
 {
+    //get queue to perform long time calculations
+    dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+    
+    //perform long task in background queue
+    
+    dispatch_async(backgroundQueue, ^{
+    
+        //parsing
     NSArray *parsedOffices = [[PSROfficesParser new] officesFromInfoes:offices];
-    NSLog(@"Parsed Offices:\n%@",parsedOffices);
+
+        //get queue of UI
+        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+        
+        //perform UI updates on Main thread
+        dispatch_async(mainQueue, ^{
+            
+        });
+        
+    });
 }
 
 @end
