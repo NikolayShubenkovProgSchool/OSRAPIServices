@@ -7,9 +7,13 @@
 //
 
 #import "PSROfficesMapViewController.h"
+
+@import MapKit;
+
 #import "PSRPochtaManager.h"
 
-@interface PSROfficesMapViewController ()
+@interface PSROfficesMapViewController () <MKMapViewDelegate>
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -17,19 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.mapView.delegate = self;
     // Do any additional setup after loading the view.
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)showOfficesPressed:(id)sender {
     [[PSRPochtaManager new] getOfficesOfCount:300
@@ -37,4 +31,12 @@
                                        
                                    }];
 }
+
+#pragma mark - MKMapView Delegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    return nil;
+}
+
 @end
