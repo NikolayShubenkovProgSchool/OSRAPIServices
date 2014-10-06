@@ -98,11 +98,18 @@
 
 - (void)p_addOfficesOnMapView:(NSArray *)offices
 {
+    self.offises = offices;
+ 
     //remove old offices from map at first
     [self.mapView removeAnnotations:self.mapView.annotations];
     
-    self.offises = offices;
+    //add new offices
     [self.mapView addAnnotations:self.offises];
+    
+    //scale to all of the offices
+    [self.mapView showAnnotations:self.offises
+                         animated:YES];
+    
     [MBProgressHUD hideAllHUDsForView:self.view
                              animated:YES];
 }
