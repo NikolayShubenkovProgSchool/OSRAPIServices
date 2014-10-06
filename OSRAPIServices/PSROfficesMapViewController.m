@@ -7,12 +7,17 @@
 //
 
 #import "PSROfficesMapViewController.h"
-#import "PSROffice.h"
 
+//frameworks
 @import MapKit;
+#import <MBProgressHUD/MBProgressHUD.h>
 
+//helpers
+
+
+//models
 #import "PSROfficesParser.h"
-
+#import "PSROffice.h"
 #import "PSRPochtaManager.h"
 
 @interface PSROfficesMapViewController () <MKMapViewDelegate>
@@ -29,12 +34,16 @@
 }
 
 - (IBAction)showOfficesPressed:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view
+                         animated:YES];
     [[PSRPochtaManager new] getOfficesOfCount:300
                                    complition:^(id data, BOOL success) {
                                        if (success){
                                            [self p_parseOffices:data];
                                        }
                                        else {
+                                           [MBProgressHUD hideAllHUDsForView:self.view
+                                                                    animated:YES];
                                            NSLog(@"recieved error when tried to get offices:\n%@",data);
                                        }
                                    }];
@@ -94,6 +103,8 @@
     
     self.offises = offices;
     [self.mapView addAnnotations:self.offises];
+    [MBProgressHUD hideAllHUDsForView:self.view
+                             animated:YES];
 }
 
 @end
