@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1E10B4DB02EB1674F57884CA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83169A34057C1962DF0F43C /* libPods.a */; };
+		FE2DC40E19DF119100CFC79C /* PSRPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */; };
+		FE2DC41119DF1CF100CFC79C /* PSRPochtaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC41019DF1CF100CFC79C /* PSRPochtaManager.m */; };
+		FE2DC41419DF1EFD00CFC79C /* PSROfficesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC41319DF1EFD00CFC79C /* PSROfficesMapViewController.m */; };
 		FE3DCEC019DB13B200E43AA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3DCEBF19DB13B200E43AA5 /* main.m */; };
 		FE3DCEC319DB13B200E43AA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3DCEC219DB13B200E43AA5 /* AppDelegate.m */; };
 		FE3DCEC619DB13B200E43AA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3DCEC519DB13B200E43AA5 /* ViewController.m */; };
@@ -15,8 +18,14 @@
 		FE3DCECB19DB13B200E43AA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3DCECA19DB13B200E43AA5 /* Images.xcassets */; };
 		FE3DCECE19DB13B200E43AA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3DCECC19DB13B200E43AA5 /* LaunchScreen.xib */; };
 		FE3DCEDA19DB13B200E43AA5 /* OSRAPIServicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3DCED919DB13B200E43AA5 /* OSRAPIServicesTests.m */; };
+		FE7391F719E32DB1006FB268 /* PSROfficesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7391F619E32DB1006FB268 /* PSROfficesParser.m */; };
+		FE7391FC19E32E0D006FB268 /* PSROffice.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7391FB19E32E0D006FB268 /* PSROffice.m */; };
+		FE7391FE19E32F79006FB268 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7391FD19E32F79006FB268 /* MapKit.framework */; };
+		FE73920019E33236006FB268 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7391FF19E33236006FB268 /* map@2x.png */; };
 		FEBA254319DB1D2A007708C0 /* PSRRSSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBA254219DB1D2A007708C0 /* PSRRSSClient.m */; };
 		FEBA254719DB24FD007708C0 /* FlickrClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBA254619DB24FD007708C0 /* FlickrClient.m */; };
+		FEBD90B819DEED58005AB299 /* PSRFlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBD90B719DEED58005AB299 /* PSRFlickrPhoto.m */; };
+		FEBD90BB19DEEE37005AB299 /* PSRFlickrSearchOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBD90BA19DEEE37005AB299 /* PSRFlickrSearchOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +42,12 @@
 		01643A89799FD351080BA25A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		25D5D7EAC2E44BDFBA102521 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B83169A34057C1962DF0F43C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2DC40C19DF119100CFC79C /* PSRPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		FE2DC40F19DF1CF100CFC79C /* PSRPochtaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPochtaManager.h; sourceTree = "<group>"; };
+		FE2DC41019DF1CF100CFC79C /* PSRPochtaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRPochtaManager.m; sourceTree = "<group>"; };
+		FE2DC41219DF1EFD00CFC79C /* PSROfficesMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROfficesMapViewController.h; sourceTree = "<group>"; };
+		FE2DC41319DF1EFD00CFC79C /* PSROfficesMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSROfficesMapViewController.m; sourceTree = "<group>"; };
 		FE3DCEBA19DB13B200E43AA5 /* OSRAPIServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSRAPIServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3DCEBE19DB13B200E43AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3DCEBF19DB13B200E43AA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,10 +61,20 @@
 		FE3DCED319DB13B200E43AA5 /* OSRAPIServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSRAPIServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3DCED819DB13B200E43AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3DCED919DB13B200E43AA5 /* OSRAPIServicesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSRAPIServicesTests.m; sourceTree = "<group>"; };
+		FE7391F519E32DB1006FB268 /* PSROfficesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROfficesParser.h; sourceTree = "<group>"; };
+		FE7391F619E32DB1006FB268 /* PSROfficesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSROfficesParser.m; sourceTree = "<group>"; };
+		FE7391FA19E32E0D006FB268 /* PSROffice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROffice.h; sourceTree = "<group>"; };
+		FE7391FB19E32E0D006FB268 /* PSROffice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSROffice.m; sourceTree = "<group>"; };
+		FE7391FD19E32F79006FB268 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FE7391FF19E33236006FB268 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
 		FEBA254119DB1D2A007708C0 /* PSRRSSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSRRSSClient.h; path = OSRAPIServices/PSRRSSClient.h; sourceTree = "<group>"; };
 		FEBA254219DB1D2A007708C0 /* PSRRSSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSRRSSClient.m; path = OSRAPIServices/PSRRSSClient.m; sourceTree = "<group>"; };
 		FEBA254519DB24FD007708C0 /* FlickrClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickrClient.h; path = OSRAPIServices/FlickrClient.h; sourceTree = "<group>"; };
 		FEBA254619DB24FD007708C0 /* FlickrClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlickrClient.m; path = OSRAPIServices/FlickrClient.m; sourceTree = "<group>"; };
+		FEBD90B619DEED58005AB299 /* PSRFlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRFlickrPhoto.h; sourceTree = "<group>"; };
+		FEBD90B719DEED58005AB299 /* PSRFlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRFlickrPhoto.m; sourceTree = "<group>"; };
+		FEBD90B919DEEE37005AB299 /* PSRFlickrSearchOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRFlickrSearchOptions.h; sourceTree = "<group>"; };
+		FEBD90BA19DEEE37005AB299 /* PSRFlickrSearchOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRFlickrSearchOptions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7391FE19E32F79006FB268 /* MapKit.framework in Frameworks */,
 				1E10B4DB02EB1674F57884CA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +109,7 @@
 		88EFFD79D0BBD87E667399A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE7391FD19E32F79006FB268 /* MapKit.framework */,
 				B83169A34057C1962DF0F43C /* libPods.a */,
 			);
 			name = Frameworks;
@@ -91,6 +118,7 @@
 		FE3DCEB119DB13B200E43AA5 = {
 			isa = PBXGroup;
 			children = (
+				FE7391FF19E33236006FB268 /* map@2x.png */,
 				FEBA254419DB1D43007708C0 /* API */,
 				FE3DCEBC19DB13B200E43AA5 /* OSRAPIServices */,
 				FE3DCED619DB13B200E43AA5 /* OSRAPIServicesTests */,
@@ -114,9 +142,9 @@
 			children = (
 				FE3DCEC119DB13B200E43AA5 /* AppDelegate.h */,
 				FE3DCEC219DB13B200E43AA5 /* AppDelegate.m */,
-				FE3DCEC419DB13B200E43AA5 /* ViewController.h */,
-				FE3DCEC519DB13B200E43AA5 /* ViewController.m */,
 				FE3DCEC719DB13B200E43AA5 /* Main.storyboard */,
+				FE7391F819E32DB9006FB268 /* Offices */,
+				FE7391F919E32DC5006FB268 /* Flickr */,
 				FE3DCECA19DB13B200E43AA5 /* Images.xcassets */,
 				FE3DCECC19DB13B200E43AA5 /* LaunchScreen.xib */,
 				FE3DCEBD19DB13B200E43AA5 /* Supporting Files */,
@@ -150,13 +178,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FE7391F819E32DB9006FB268 /* Offices */ = {
+			isa = PBXGroup;
+			children = (
+				FE7391FA19E32E0D006FB268 /* PSROffice.h */,
+				FE7391FB19E32E0D006FB268 /* PSROffice.m */,
+				FE7391F519E32DB1006FB268 /* PSROfficesParser.h */,
+				FE7391F619E32DB1006FB268 /* PSROfficesParser.m */,
+				FE2DC41219DF1EFD00CFC79C /* PSROfficesMapViewController.h */,
+				FE2DC41319DF1EFD00CFC79C /* PSROfficesMapViewController.m */,
+			);
+			name = Offices;
+			sourceTree = "<group>";
+		};
+		FE7391F919E32DC5006FB268 /* Flickr */ = {
+			isa = PBXGroup;
+			children = (
+				FE2DC40C19DF119100CFC79C /* PSRPhotoCollectionViewCell.h */,
+				FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */,
+				FE3DCEC419DB13B200E43AA5 /* ViewController.h */,
+				FE3DCEC519DB13B200E43AA5 /* ViewController.m */,
+			);
+			name = Flickr;
+			sourceTree = "<group>";
+		};
 		FEBA254419DB1D43007708C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FE2DC40F19DF1CF100CFC79C /* PSRPochtaManager.h */,
+				FE2DC41019DF1CF100CFC79C /* PSRPochtaManager.m */,
+				FEBD90B619DEED58005AB299 /* PSRFlickrPhoto.h */,
+				FEBD90B719DEED58005AB299 /* PSRFlickrPhoto.m */,
 				FEBA254519DB24FD007708C0 /* FlickrClient.h */,
 				FEBA254619DB24FD007708C0 /* FlickrClient.m */,
 				FEBA254119DB1D2A007708C0 /* PSRRSSClient.h */,
 				FEBA254219DB1D2A007708C0 /* PSRRSSClient.m */,
+				FEBD90B919DEEE37005AB299 /* PSRFlickrSearchOptions.h */,
+				FEBD90BA19DEEE37005AB299 /* PSRFlickrSearchOptions.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -244,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE3DCEC919DB13B200E43AA5 /* Main.storyboard in Resources */,
+				FE73920019E33236006FB268 /* map@2x.png in Resources */,
 				FE3DCECE19DB13B200E43AA5 /* LaunchScreen.xib in Resources */,
 				FE3DCECB19DB13B200E43AA5 /* Images.xcassets in Resources */,
 			);
@@ -296,9 +355,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2DC41119DF1CF100CFC79C /* PSRPochtaManager.m in Sources */,
+				FEBD90BB19DEEE37005AB299 /* PSRFlickrSearchOptions.m in Sources */,
+				FE7391F719E32DB1006FB268 /* PSROfficesParser.m in Sources */,
+				FE7391FC19E32E0D006FB268 /* PSROffice.m in Sources */,
 				FEBA254719DB24FD007708C0 /* FlickrClient.m in Sources */,
 				FE3DCEC619DB13B200E43AA5 /* ViewController.m in Sources */,
 				FEBA254319DB1D2A007708C0 /* PSRRSSClient.m in Sources */,
+				FE2DC41419DF1EFD00CFC79C /* PSROfficesMapViewController.m in Sources */,
+				FEBD90B819DEED58005AB299 /* PSRFlickrPhoto.m in Sources */,
+				FE2DC40E19DF119100CFC79C /* PSRPhotoCollectionViewCell.m in Sources */,
 				FE3DCEC319DB13B200E43AA5 /* AppDelegate.m in Sources */,
 				FE3DCEC019DB13B200E43AA5 /* main.m in Sources */,
 			);
@@ -426,6 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OSRAPIServices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -437,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OSRAPIServices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
