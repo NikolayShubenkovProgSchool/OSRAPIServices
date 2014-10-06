@@ -7,6 +7,7 @@
 //
 
 #import "PSROfficesMapViewController.h"
+#import "PSROffice.h"
 
 @import MapKit;
 
@@ -43,7 +44,21 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    return nil;
+    //if it is not our office model class annotation just return nil
+    //to show annotaion of default presentation style
+    if (![annotation isKindOfClass:[PSROffice class]]){
+        return nil;
+    }
+    NSString *identifier = @"PSRMapANnotationIdentifier";
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    if (!annotationView){
+        annotationView = [[MKAnnotationView alloc]initWithAnnotation:annotation
+                                                     reuseIdentifier:identifier];
+    }
+    annotationView.image = [UIImage imageNamed:@"map"];
+    annotationView.canShowCallout = YES;
+
+    return annotationView;
 }
 
 #pragma mark - Private
@@ -66,9 +81,19 @@
         //perform UI updates on Main thread
         dispatch_async(mainQueue, ^{
             
+            [self p_addOfficesOnMapView:parsedOffices];
         });
         
     });
+}
+
+- (void)p_addOfficesOnMapView:(NSArray *)offices
+{
+    //remove old offices from map at first
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    self.offises = offices;
+    [self.mapView addAnnotations:self.offises];
 }
 
 @end

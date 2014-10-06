@@ -21,6 +21,7 @@
 		FE7391F719E32DB1006FB268 /* PSROfficesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7391F619E32DB1006FB268 /* PSROfficesParser.m */; };
 		FE7391FC19E32E0D006FB268 /* PSROffice.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7391FB19E32E0D006FB268 /* PSROffice.m */; };
 		FE7391FE19E32F79006FB268 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7391FD19E32F79006FB268 /* MapKit.framework */; };
+		FE73920019E33236006FB268 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7391FF19E33236006FB268 /* map@2x.png */; };
 		FEBA254319DB1D2A007708C0 /* PSRRSSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBA254219DB1D2A007708C0 /* PSRRSSClient.m */; };
 		FEBA254719DB24FD007708C0 /* FlickrClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBA254619DB24FD007708C0 /* FlickrClient.m */; };
 		FEBD90B819DEED58005AB299 /* PSRFlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBD90B719DEED58005AB299 /* PSRFlickrPhoto.m */; };
@@ -65,6 +66,7 @@
 		FE7391FA19E32E0D006FB268 /* PSROffice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROffice.h; sourceTree = "<group>"; };
 		FE7391FB19E32E0D006FB268 /* PSROffice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSROffice.m; sourceTree = "<group>"; };
 		FE7391FD19E32F79006FB268 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FE7391FF19E33236006FB268 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
 		FEBA254119DB1D2A007708C0 /* PSRRSSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSRRSSClient.h; path = OSRAPIServices/PSRRSSClient.h; sourceTree = "<group>"; };
 		FEBA254219DB1D2A007708C0 /* PSRRSSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSRRSSClient.m; path = OSRAPIServices/PSRRSSClient.m; sourceTree = "<group>"; };
 		FEBA254519DB24FD007708C0 /* FlickrClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickrClient.h; path = OSRAPIServices/FlickrClient.h; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		FE3DCEB119DB13B200E43AA5 = {
 			isa = PBXGroup;
 			children = (
+				FE7391FF19E33236006FB268 /* map@2x.png */,
 				FEBA254419DB1D43007708C0 /* API */,
 				FE3DCEBC19DB13B200E43AA5 /* OSRAPIServices */,
 				FE3DCED619DB13B200E43AA5 /* OSRAPIServicesTests */,
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE3DCEC919DB13B200E43AA5 /* Main.storyboard in Resources */,
+				FE73920019E33236006FB268 /* map@2x.png in Resources */,
 				FE3DCECE19DB13B200E43AA5 /* LaunchScreen.xib in Resources */,
 				FE3DCECB19DB13B200E43AA5 /* Images.xcassets in Resources */,
 			);
