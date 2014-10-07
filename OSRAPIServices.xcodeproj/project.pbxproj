@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1E10B4DB02EB1674F57884CA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B83169A34057C1962DF0F43C /* libPods.a */; };
+		FE1818AF19E4502700307018 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE1818AD19E4502700307018 /* DataModel.xcdatamodeld */; };
+		FE1818B219E453D900307018 /* DetailedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1818B119E453D900307018 /* DetailedInfo.m */; };
+		FE1818B519E453DA00307018 /* Office.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1818B419E453DA00307018 /* Office.m */; };
+		FE1818B819E453DA00307018 /* Coordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1818B719E453DA00307018 /* Coordinates.m */; };
+		FE1818BC19E456A100307018 /* Office+Fetch.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1818BB19E456A100307018 /* Office+Fetch.m */; };
 		FE2DC40E19DF119100CFC79C /* PSRPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */; };
 		FE2DC41119DF1CF100CFC79C /* PSRPochtaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC41019DF1CF100CFC79C /* PSRPochtaManager.m */; };
 		FE2DC41419DF1EFD00CFC79C /* PSROfficesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC41319DF1EFD00CFC79C /* PSROfficesMapViewController.m */; };
@@ -18,7 +23,7 @@
 		FE3DCECB19DB13B200E43AA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3DCECA19DB13B200E43AA5 /* Images.xcassets */; };
 		FE3DCECE19DB13B200E43AA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3DCECC19DB13B200E43AA5 /* LaunchScreen.xib */; };
 		FE3DCEDA19DB13B200E43AA5 /* OSRAPIServicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3DCED919DB13B200E43AA5 /* OSRAPIServicesTests.m */; };
-		FE6441E219E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6441E119E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m */; };
+		FE6441E219E447B900E3BAD0 /* PSROfficesCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6441E119E447B900E3BAD0 /* PSROfficesCoreDataViewController.m */; };
 		FE7391F719E32DB1006FB268 /* PSROfficesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7391F619E32DB1006FB268 /* PSROfficesParser.m */; };
 		FE7391FC19E32E0D006FB268 /* PSROffice.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7391FB19E32E0D006FB268 /* PSROffice.m */; };
 		FE7391FE19E32F79006FB268 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7391FD19E32F79006FB268 /* MapKit.framework */; };
@@ -43,6 +48,15 @@
 		01643A89799FD351080BA25A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		25D5D7EAC2E44BDFBA102521 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B83169A34057C1962DF0F43C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1818AE19E4502700307018 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		FE1818B019E453D900307018 /* DetailedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedInfo.h; sourceTree = "<group>"; };
+		FE1818B119E453D900307018 /* DetailedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedInfo.m; sourceTree = "<group>"; };
+		FE1818B319E453DA00307018 /* Office.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Office.h; sourceTree = "<group>"; };
+		FE1818B419E453DA00307018 /* Office.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Office.m; sourceTree = "<group>"; };
+		FE1818B619E453DA00307018 /* Coordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinates.h; sourceTree = "<group>"; };
+		FE1818B719E453DA00307018 /* Coordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinates.m; sourceTree = "<group>"; };
+		FE1818BA19E456A100307018 /* Office+Fetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Office+Fetch.h"; sourceTree = "<group>"; };
+		FE1818BB19E456A100307018 /* Office+Fetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Office+Fetch.m"; sourceTree = "<group>"; };
 		FE2DC40C19DF119100CFC79C /* PSRPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		FE2DC40F19DF1CF100CFC79C /* PSRPochtaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPochtaManager.h; sourceTree = "<group>"; };
@@ -62,8 +76,8 @@
 		FE3DCED319DB13B200E43AA5 /* OSRAPIServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSRAPIServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3DCED819DB13B200E43AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3DCED919DB13B200E43AA5 /* OSRAPIServicesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSRAPIServicesTests.m; sourceTree = "<group>"; };
-		FE6441E019E447B900E3BAD0 /* PSRPhotosCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPhotosCoreDataViewController.h; sourceTree = "<group>"; };
-		FE6441E119E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRPhotosCoreDataViewController.m; sourceTree = "<group>"; };
+		FE6441E019E447B900E3BAD0 /* PSROfficesCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROfficesCoreDataViewController.h; sourceTree = "<group>"; };
+		FE6441E119E447B900E3BAD0 /* PSROfficesCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSROfficesCoreDataViewController.m; sourceTree = "<group>"; };
 		FE7391F519E32DB1006FB268 /* PSROfficesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROfficesParser.h; sourceTree = "<group>"; };
 		FE7391F619E32DB1006FB268 /* PSROfficesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSROfficesParser.m; sourceTree = "<group>"; };
 		FE7391FA19E32E0D006FB268 /* PSROffice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROffice.h; sourceTree = "<group>"; };
@@ -118,10 +132,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE1818B919E453DF00307018 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FE1818B619E453DA00307018 /* Coordinates.h */,
+				FE1818B719E453DA00307018 /* Coordinates.m */,
+				FE1818B319E453DA00307018 /* Office.h */,
+				FE1818B419E453DA00307018 /* Office.m */,
+				FE1818B019E453D900307018 /* DetailedInfo.h */,
+				FE1818B119E453D900307018 /* DetailedInfo.m */,
+			);
+			name = CoreData;
+			path = OSRAPIServices;
+			sourceTree = "<group>";
+		};
 		FE3DCEB119DB13B200E43AA5 = {
 			isa = PBXGroup;
 			children = (
 				FE7391FF19E33236006FB268 /* map@2x.png */,
+				FE1818B919E453DF00307018 /* CoreData */,
 				FEBA254419DB1D43007708C0 /* API */,
 				FE3DCEBC19DB13B200E43AA5 /* OSRAPIServices */,
 				FE3DCED619DB13B200E43AA5 /* OSRAPIServicesTests */,
@@ -146,6 +175,9 @@
 				FE3DCEC119DB13B200E43AA5 /* AppDelegate.h */,
 				FE3DCEC219DB13B200E43AA5 /* AppDelegate.m */,
 				FE3DCEC719DB13B200E43AA5 /* Main.storyboard */,
+				FE1818BA19E456A100307018 /* Office+Fetch.h */,
+				FE1818BB19E456A100307018 /* Office+Fetch.m */,
+				FE1818AD19E4502700307018 /* DataModel.xcdatamodeld */,
 				FE6441E319E447BF00E3BAD0 /* CoreData */,
 				FE7391F819E32DB9006FB268 /* Offices */,
 				FE7391F919E32DC5006FB268 /* Flickr */,
@@ -185,8 +217,8 @@
 		FE6441E319E447BF00E3BAD0 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				FE6441E019E447B900E3BAD0 /* PSRPhotosCoreDataViewController.h */,
-				FE6441E119E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m */,
+				FE6441E019E447B900E3BAD0 /* PSROfficesCoreDataViewController.h */,
+				FE6441E119E447B900E3BAD0 /* PSROfficesCoreDataViewController.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -371,16 +403,21 @@
 				FE2DC41119DF1CF100CFC79C /* PSRPochtaManager.m in Sources */,
 				FEBD90BB19DEEE37005AB299 /* PSRFlickrSearchOptions.m in Sources */,
 				FE7391F719E32DB1006FB268 /* PSROfficesParser.m in Sources */,
+				FE1818AF19E4502700307018 /* DataModel.xcdatamodeld in Sources */,
 				FE7391FC19E32E0D006FB268 /* PSROffice.m in Sources */,
 				FEBA254719DB24FD007708C0 /* FlickrClient.m in Sources */,
 				FE3DCEC619DB13B200E43AA5 /* ViewController.m in Sources */,
 				FEBA254319DB1D2A007708C0 /* PSRRSSClient.m in Sources */,
 				FE2DC41419DF1EFD00CFC79C /* PSROfficesMapViewController.m in Sources */,
+				FE1818B219E453D900307018 /* DetailedInfo.m in Sources */,
 				FEBD90B819DEED58005AB299 /* PSRFlickrPhoto.m in Sources */,
 				FE2DC40E19DF119100CFC79C /* PSRPhotoCollectionViewCell.m in Sources */,
+				FE1818B819E453DA00307018 /* Coordinates.m in Sources */,
 				FE3DCEC319DB13B200E43AA5 /* AppDelegate.m in Sources */,
-				FE6441E219E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m in Sources */,
+				FE1818BC19E456A100307018 /* Office+Fetch.m in Sources */,
+				FE6441E219E447B900E3BAD0 /* PSROfficesCoreDataViewController.m in Sources */,
 				FE3DCEC019DB13B200E43AA5 /* main.m in Sources */,
+				FE1818B519E453DA00307018 /* Office.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +626,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE1818AD19E4502700307018 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE1818AE19E4502700307018 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = FE1818AE19E4502700307018 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FE3DCEB219DB13B200E43AA5 /* Project object */;
 }

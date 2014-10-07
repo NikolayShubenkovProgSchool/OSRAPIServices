@@ -28,9 +28,11 @@
                                  @"tags"   :tag,
                                  @"lat":@(55),
                                  @"lon":@(37),
-                                 @"radious":@(50),
+                                 @"radious":@(500),
                                  @"format":@"json",
-                                 @"nojsoncallback":@"1"};
+                                 @"per_page":@"500",
+                                 @"nojsoncallback":@"1",
+                                 @"extra":@"original_format,tags,description,geo,date_upload,owner_name"};
     [self GET:@""
    parameters:parameters
       success:^(AFHTTPRequestOperation *operation, id responseObject) {

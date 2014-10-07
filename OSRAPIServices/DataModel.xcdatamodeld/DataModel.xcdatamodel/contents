@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13F34" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Coordinates" representedClassName="Coordinates" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="office" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Office" inverseName="coordinates" inverseEntity="Office" syncable="YES"/>
+    </entity>
+    <entity name="DetailedInfo" representedClassName="DetailedInfo" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="office" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Office" inverseName="info" inverseEntity="Office" syncable="YES"/>
+    </entity>
+    <entity name="Office" representedClassName="Office" syncable="YES">
+        <attribute name="idValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="opened" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="coordinates" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Coordinates" inverseName="office" inverseEntity="Coordinates" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DetailedInfo" inverseName="office" inverseEntity="DetailedInfo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Office" positionX="25" positionY="443" width="128" height="118"/>
+        <element name="Coordinates" positionX="243" positionY="407" width="128" height="88"/>
+        <element name="DetailedInfo" positionX="252" positionY="531" width="128" height="73"/>
+    </elements>
+</model>
