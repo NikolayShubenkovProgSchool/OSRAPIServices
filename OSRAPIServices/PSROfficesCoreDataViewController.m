@@ -43,8 +43,8 @@
 
 - (IBAction)loadOffices:(id)sender
 {
-    [[PSRPochtaManager new] getOfficesOfCount:500 complition:^(id data, BOOL success) {
-        [self p_parseOffices:data];
+    [[PSRPochtaManager new] getOfficesOfCount:500 complition:^(NSArray *data, BOOL success) {
+        [self p_parseOffices:[data objectEnumerator]];
     }];
 }
 
@@ -55,15 +55,30 @@
     [self.tableView reloadData];
 }
 
-- (void)p_parseOffices:(NSArray *)offices
+- (void)p_parseOffices:(NSEnumerator *)officesEnumerator
 {
+    __block BOOL parseFinished = NO;
+    int parseOfficesChankCount = 10;
     [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
-        for (NSDictionary *anOfficeInfo in offices){
+        
+        int k = parseOfficesChankCount;
+        NSDictionary *anOfficeInfo = [officesEnumerator nextObject];
+        while (k-- > 0 && anOfficeInfo) {
             [Office officeWithInfo:anOfficeInfo
                         inContenxt:localContext];
         }
+        if (!anOfficeInfo){
+            parseFinished = YES;
+        }
+        [NSThread sleepForTimeInterval:0.5];
     } completion:^(BOOL success, NSError *error) {
-        [self update];
+        if (parseFinished){
+            return ;
+        }
+        else {
+            [self update];
+[self p_parseOffices:officesEnumerator];
+        }
     }];
 }
 
