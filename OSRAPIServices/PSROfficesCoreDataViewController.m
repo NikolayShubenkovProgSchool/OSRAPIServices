@@ -17,7 +17,6 @@
 
 
 @interface PSROfficesCoreDataViewController ()
-@property (nonatomic, strong) NSArray *offices;
 @end
 
 @implementation PSROfficesCoreDataViewController
@@ -25,19 +24,10 @@
 
 #pragma mark - View Lifcecycle
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    // Do any additional setup after loading the view.
-}
 - (IBAction)cleanAllData:(id)sender
 {
     [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
         [Office MR_truncateAllInContext:localContext];
-    } completion:^(BOOL success, NSError *error) {
-        NSLog(@"all offices removed");
-        [self update];
     }];
 }
 
@@ -46,13 +36,6 @@
     [[PSRPochtaManager new] getOfficesOfCount:500 complition:^(NSArray *data, BOOL success) {
         [self p_parseOffices:[data objectEnumerator]];
     }];
-}
-
-- (void)update
-{
-    self.offices = [Office MR_findAllSortedBy:@"title"
-                                    ascending:YES];
-    [self.tableView reloadData];
 }
 
 - (void)p_parseOffices:(NSEnumerator *)officesEnumerator
@@ -76,51 +59,31 @@
             return ;
         }
         else {
-            [self update];
 [self p_parseOffices:officesEnumerator];
         }
     }];
 }
 
 
-#pragma mark - UITableViewDataSourse
+#pragma mark - Super
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSString *)cellReuseIdentifier
 {
-    return 1;
+    return @"officeCell";
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSFetchRequest *)dataRequest
 {
-    return self.offices.count;
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Office class])];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:NSStringFromSelector(@selector(title))
+                                                              ascending:YES]];
+    return request;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *aCell = [tableView dequeueReusableCellWithIdentifier:@"officeCell"];
-    [self p_configureCell:aCell
-              atIndexPath:indexPath
-                 withItem:[self p_itemAtIndexPath:indexPath]];
-    return aCell;
-}
-
-#pragma mark - UITableView Delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
-- (id)p_itemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return self.offices[indexPath.row];
-}
-
-- (void)p_configureCell:(UITableViewCell *)aCell atIndexPath:(NSIndexPath *)indexPath withItem:(Office *)office
+- (void) configureCell:(UITableViewCell *)aCell withItem:(Office *)office
 {
     aCell.textLabel.text       = office.title;
     aCell.detailTextLabel.text = office.opened ? @"Открыто" : @"Закрыто";
 }
-
 
 @end

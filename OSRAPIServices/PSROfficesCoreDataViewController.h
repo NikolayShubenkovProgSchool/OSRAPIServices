@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PSROfficesCoreDataViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+#import "PSRCoreDataTableViewController.h"
+
+@interface PSROfficesCoreDataViewController : PSRCoreDataTableViewController
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
