@@ -17,12 +17,20 @@
 
 
 @interface PSROfficesCoreDataViewController ()
+@property (nonatomic) BOOL searchForCurrentlyWorkingOffices;
 @end
 
 @implementation PSROfficesCoreDataViewController
 
 
-#pragma mark - View Lifcecycle
+#pragma mark - UIEvents
+- (IBAction)officesFilterChanged:(UISwitch *)sender
+{
+    self.searchForCurrentlyWorkingOffices = sender.on;
+    
+    self.fetchedResultsController = nil;
+    [self performFetch];
+}
 
 - (IBAction)cleanAllData:(id)sender
 {
@@ -77,7 +85,17 @@
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Office class])];
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:NSStringFromSelector(@selector(title))
                                                               ascending:YES]];
+    request.predicate = [self predicateForOffices];
     return request;
+}
+
+- (NSPredicate *)predicateForOffices
+{
+    if (self.searchForCurrentlyWorkingOffices){
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"opened = YES"];
+        return predicate;
+    }
+    return nil;
 }
 
 - (void) configureCell:(UITableViewCell *)aCell withItem:(Office *)office
