@@ -31,12 +31,28 @@
     self.tableView.dataSource = self;
     // Do any additional setup after loading the view.
 }
+- (IBAction)cleanAllData:(id)sender
+{
+    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+        [Office MR_truncateAllInContext:localContext];
+    } completion:^(BOOL success, NSError *error) {
+        NSLog(@"all offices removed");
+        [self update];
+    }];
+}
 
 - (IBAction)loadOffices:(id)sender
 {
     [[PSRPochtaManager new] getOfficesOfCount:500 complition:^(id data, BOOL success) {
         [self p_parseOffices:data];
     }];
+}
+
+- (void)update
+{
+    self.offices = [Office MR_findAllSortedBy:@"title"
+                                    ascending:YES];
+    [self.tableView reloadData];
 }
 
 - (void)p_parseOffices:(NSArray *)offices
@@ -47,9 +63,7 @@
                         inContenxt:localContext];
         }
     } completion:^(BOOL success, NSError *error) {
-        self.offices = [Office MR_findAllSortedBy:@"title"
-                                        ascending:YES];
-        [self.tableView reloadData];
+        [self update];
     }];
 }
 
