@@ -18,6 +18,7 @@
 		FE3DCECB19DB13B200E43AA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3DCECA19DB13B200E43AA5 /* Images.xcassets */; };
 		FE3DCECE19DB13B200E43AA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3DCECC19DB13B200E43AA5 /* LaunchScreen.xib */; };
 		FE3DCEDA19DB13B200E43AA5 /* OSRAPIServicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3DCED919DB13B200E43AA5 /* OSRAPIServicesTests.m */; };
+		FE6441E219E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6441E119E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m */; };
 		FE7391F719E32DB1006FB268 /* PSROfficesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7391F619E32DB1006FB268 /* PSROfficesParser.m */; };
 		FE7391FC19E32E0D006FB268 /* PSROffice.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7391FB19E32E0D006FB268 /* PSROffice.m */; };
 		FE7391FE19E32F79006FB268 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7391FD19E32F79006FB268 /* MapKit.framework */; };
@@ -61,6 +62,8 @@
 		FE3DCED319DB13B200E43AA5 /* OSRAPIServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSRAPIServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3DCED819DB13B200E43AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3DCED919DB13B200E43AA5 /* OSRAPIServicesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSRAPIServicesTests.m; sourceTree = "<group>"; };
+		FE6441E019E447B900E3BAD0 /* PSRPhotosCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPhotosCoreDataViewController.h; sourceTree = "<group>"; };
+		FE6441E119E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRPhotosCoreDataViewController.m; sourceTree = "<group>"; };
 		FE7391F519E32DB1006FB268 /* PSROfficesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROfficesParser.h; sourceTree = "<group>"; };
 		FE7391F619E32DB1006FB268 /* PSROfficesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSROfficesParser.m; sourceTree = "<group>"; };
 		FE7391FA19E32E0D006FB268 /* PSROffice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROffice.h; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 				FE3DCEC119DB13B200E43AA5 /* AppDelegate.h */,
 				FE3DCEC219DB13B200E43AA5 /* AppDelegate.m */,
 				FE3DCEC719DB13B200E43AA5 /* Main.storyboard */,
+				FE6441E319E447BF00E3BAD0 /* CoreData */,
 				FE7391F819E32DB9006FB268 /* Offices */,
 				FE7391F919E32DC5006FB268 /* Flickr */,
 				FE3DCECA19DB13B200E43AA5 /* Images.xcassets */,
@@ -176,6 +180,15 @@
 				FE3DCED819DB13B200E43AA5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE6441E319E447BF00E3BAD0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FE6441E019E447B900E3BAD0 /* PSRPhotosCoreDataViewController.h */,
+				FE6441E119E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		FE7391F819E32DB9006FB268 /* Offices */ = {
@@ -366,6 +379,7 @@
 				FEBD90B819DEED58005AB299 /* PSRFlickrPhoto.m in Sources */,
 				FE2DC40E19DF119100CFC79C /* PSRPhotoCollectionViewCell.m in Sources */,
 				FE3DCEC319DB13B200E43AA5 /* AppDelegate.m in Sources */,
+				FE6441E219E447B900E3BAD0 /* PSRPhotosCoreDataViewController.m in Sources */,
 				FE3DCEC019DB13B200E43AA5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

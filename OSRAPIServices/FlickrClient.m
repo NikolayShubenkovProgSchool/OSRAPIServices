@@ -24,10 +24,11 @@
 {
     PSRFlickrCopmlition copiedComplitionBlock = [complitionBlock copy];
     NSDictionary *parameters = @{@"method" :@"flickr.photos.search",
-                                 @"api_key":@"82022260ce75b85778f8efc33e4bdf04",
+                                 @"api_key":@"90f769c05a5f121ea4e592ea0147b916",
                                  @"tags"   :tag,
                                  @"lat":@(55),
                                  @"lon":@(37),
+                                 @"radious":@(50),
                                  @"format":@"json",
                                  @"nojsoncallback":@"1"};
     [self GET:@""
