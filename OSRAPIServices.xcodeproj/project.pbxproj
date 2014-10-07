@@ -13,6 +13,7 @@
 		FE1818B519E453DA00307018 /* Office.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1818B419E453DA00307018 /* Office.m */; };
 		FE1818B819E453DA00307018 /* Coordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1818B719E453DA00307018 /* Coordinates.m */; };
 		FE1818BC19E456A100307018 /* Office+Fetch.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1818BB19E456A100307018 /* Office+Fetch.m */; };
+		FE1818BF19E463C100307018 /* PSRCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1818BE19E463C100307018 /* PSRCoreDataTableViewController.m */; };
 		FE2DC40E19DF119100CFC79C /* PSRPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */; };
 		FE2DC41119DF1CF100CFC79C /* PSRPochtaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC41019DF1CF100CFC79C /* PSRPochtaManager.m */; };
 		FE2DC41419DF1EFD00CFC79C /* PSROfficesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2DC41319DF1EFD00CFC79C /* PSROfficesMapViewController.m */; };
@@ -57,6 +58,8 @@
 		FE1818B719E453DA00307018 /* Coordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinates.m; sourceTree = "<group>"; };
 		FE1818BA19E456A100307018 /* Office+Fetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Office+Fetch.h"; sourceTree = "<group>"; };
 		FE1818BB19E456A100307018 /* Office+Fetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Office+Fetch.m"; sourceTree = "<group>"; };
+		FE1818BD19E463C100307018 /* PSRCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRCoreDataTableViewController.h; sourceTree = "<group>"; };
+		FE1818BE19E463C100307018 /* PSRCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRCoreDataTableViewController.m; sourceTree = "<group>"; };
 		FE2DC40C19DF119100CFC79C /* PSRPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		FE2DC40D19DF119100CFC79C /* PSRPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		FE2DC40F19DF1CF100CFC79C /* PSRPochtaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRPochtaManager.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 		FE6441E319E447BF00E3BAD0 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				FE1818BD19E463C100307018 /* PSRCoreDataTableViewController.h */,
+				FE1818BE19E463C100307018 /* PSRCoreDataTableViewController.m */,
 				FE6441E019E447B900E3BAD0 /* PSROfficesCoreDataViewController.h */,
 				FE6441E119E447B900E3BAD0 /* PSROfficesCoreDataViewController.m */,
 			);
@@ -418,6 +423,7 @@
 				FE6441E219E447B900E3BAD0 /* PSROfficesCoreDataViewController.m in Sources */,
 				FE3DCEC019DB13B200E43AA5 /* main.m in Sources */,
 				FE1818B519E453DA00307018 /* Office.m in Sources */,
+				FE1818BF19E463C100307018 /* PSRCoreDataTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
